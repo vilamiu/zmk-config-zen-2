@@ -36,7 +36,7 @@
 //                    | BCK | DEL | ESC[1]|     | ENT[2] | SPC | TAB |
                         bindings = <
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)     AS(I)       AS(O)      AS(P)     &kp RWIN
-   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)     AS(K)       AS(L)      SEMI      &kp RALT
+   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)     AS(K)       AS(L)      &kp SEMI  &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)     &kp COMMA   &kp DOT    &kp FSLH  &kp RCTRL
                         &kp BSPC   &kp DEL   &lt 1 ESC                     &lt 2 RET  &kp SPACE   &kp TAB
                         >;
