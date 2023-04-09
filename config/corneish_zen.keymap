@@ -31,13 +31,13 @@
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
 // |  WIN |  Q  |  W  |  E  |  R  |   T   |     |   Y    |  U  |  I  |  O  |  P  | WIN  |
-// | CTRL |  A  |  S  |  D  |  F  |   G   |     |   H    |  J  |  K  |  L  |  ;  | CTRL |
-// |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |  M  |  ,  |  .  |  /  | ALT  |
+// | CTRL |  A  |  S  |  D  |  F  |   G   |     |   H    |  J  |  K  |  L  |  ;: | CTRL |
+// |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |  M  |  ,' |  ." |  /? | ALT  |
 //                    | BCK | DEL | ESC[1]|     | ENT[2] | SPC | TAB |
                         bindings = <
-   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)       AS(O)      AS(P)      &kp RWIN
-   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)       AS(L)      AS(SEMI)   &kp RALT
-   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &kp COMMA   &kp DOT    AS(FSLH)   &kp RCTRL
+   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)          AS(O)         AS(P)      &kp RWIN
+   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)          AS(L)         AS(SEMI)   &kp RALT
+   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt DQT COMMA  &mt APOS DOT  AS(FSLH)   &kp RCTRL
                         &kp BSPC   &kp DEL   &lt 1 ESC                     &lt 2 RET  &kp SPACE   &kp TAB
                         >;
                 };
