@@ -11,6 +11,10 @@
   };
 };
 
+&mt {
+    tapping-term-ms = <200>;
+};
+
 / {
         behaviors {
             as: auto_shift {
