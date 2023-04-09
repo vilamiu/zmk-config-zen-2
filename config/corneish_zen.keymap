@@ -42,21 +42,21 @@
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)         AS(P)      &kp RWIN
    &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)         AS(SEMI)   &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT   AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &kp DEL   &lt 1 ESC                     &lt 2 RET  &kp SPACE       &kp  TAB
+                        &kp BSPC   &kp DEL   &lt 2 ESC                     &lt 1 RET  &kp SPACE       &kp  TAB
                         >;
                 };
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  | \_ | 7& | 8* | 9| | <> |    | PRT | F12 | F7 | F8 | F9 |  |
+// |  | +- | 4$ | 5% | 6^ | [] |    | SLK | F11 | F4 | F5 | F6 |  |
+// |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
+//              | ,. | 0= | () |    |     |     |    |
                         bindings = <
-   &kp LWIN    &mt ? LBKT    &mt ? N7      &mt ? N8      &mt ? N9   &mt ? ]     &kp F12   &kp F7   &kp F8   &kp F9   &kp PRINTSCREEN   &kp RWIN
-   &kp LALT    &mt ? SEMI    &mt ? N4      &mt ? N5      &mt ? N6   &mt ? =     &kp F11   &kp F4   &kp F5   &kp F6   &kp SCROLLLOCK    &kp RALT
-   &kp LCTRL   &mt ? GRAVE   &mt ? N1      &mt ? N2      &mt ? N3   &mt ? BSLH  &kp F10   &kp F1   &kp F2   &kp F3   &kp PAUSE_BREAK   &kp RCTRL
-                          	 &mt LPAR DOT  &mt RPAR N0   &mt MINUS TILDE        &trans    &trans   &trans
+   &trans  &mt UNDER LBKT   &mt AMPS N7   &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
+   &trans  &mt MINUS PLUS   &mt DLLR N4   &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
+   &trans  &mt TILDE GRAVE  &mt EXCL N1   &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
+           &mt LPAR DOT     &mt RPAR N0   &mt MINUS TILDE                                                   &trans   &trans  &trans
                         >;
                 };
 
