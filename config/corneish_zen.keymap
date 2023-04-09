@@ -12,7 +12,7 @@
 };
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <175>;
 };
 
 / {
@@ -53,20 +53,20 @@
 // |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
 //              | ,. | 0= | () |    |     |     |    |
                         bindings = <
-   &trans  &mt UNDER LBKT   &mt AMPS N7   &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
-   &trans  &mt MINUS PLUS   &mt DLLR N4   &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
-   &trans  &mt TILDE GRAVE  &mt EXCL N1   &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
-           &mt LPAR DOT     &mt RPAR N0   &mt MINUS TILDE                                                   &trans   &trans  &trans
+   &trans  &mt UNDER LBKT   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
+   &trans  &mt MINUS PLUS   &mt DLLR N4      &mt PRCNT N5          &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
+   &trans  &mt TILDE GRAVE  &mt EXCL N1      &mt AT N2             &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
+           &mt DOT COMMA    &mt KP_EQUAL N0  &mt KP_RPAR KP_LPAR                                                 &trans   &trans  &trans
                         >;
                 };
 
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  |     |     |     |     |     |   |     |     |     |     |     |  |
+// |  |     |     |     |     |     |   |     |     |     |     |     |  |
+// |  |     |     |     |     |     |   |     |     |     |     |     |  |
+//                |     |     |     |   |     |     |     |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
