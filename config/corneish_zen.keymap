@@ -26,6 +26,14 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+            my_macro: my_macro {
+                compatible = "zmk,behavior-macro";
+                label = "ZM_my_macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp Z &kp M &kp K>;
+    };
         };
 
         keymap {
@@ -66,12 +74,12 @@
 // |  |     |     |     |     |     |   | Redo | Paste | Copy | Cut  | Undo |  |
 // |  |     | ALT |CTRL |SHFT |     |   | Caps |   ←   |  ↑   |  ↓   |  →   |  |
 // |  |     |     |     |     |     |   | Ins  |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |     |   |      |  SPC  |  TAB |
+//                |     |     |     |   | BCK  |  SPC  |  TAB |
                         bindings = <
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp C_AC_REDO &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &kp C_AC_UNDO &trans
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS      &kp LEFT       &kp UP        &kp DOWN     &kp RIGHT     &trans
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp INS       &kp HOME       &kp PG_UP     &kp PG_DN    &kp END       &trans
-                     &trans    &trans     &trans                            &trans         &kp SPACE     &kp  TAB
+   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
+   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS       &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+   &trans   &trans   &trans    &trans     &trans     &trans   &kp INS        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+                     &trans    &trans     &trans                             &kp BSPC      &kp SPACE     &kp TAB
                         >;
                 };
         };
