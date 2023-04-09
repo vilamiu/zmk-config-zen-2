@@ -74,12 +74,12 @@
 // |  |     |     |     |     |     |   | Redo | Paste | Copy | Cut  | Undo |  |
 // |  |     | ALT |CTRL |SHFT |     |   | Caps |   ←   |  ↑   |  ↓   |  →   |  |
 // |  |     |     |     |     |     |   | Ins  |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |     |   | BCK  |  SPC  |  TAB |
+//                |     |     |     |   | ENT  |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
    &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS       &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
    &trans   &trans   &trans    &trans     &trans     &trans   &kp INS        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
-                     &trans    &trans     &trans                             &kp BSPC      &kp SPACE     &kp TAB
+                     &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
         };
