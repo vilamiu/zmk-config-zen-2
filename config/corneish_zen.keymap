@@ -34,29 +34,29 @@
                 default_layer {
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
-// |  WIN |  Q  |  W  |  E  |  R  |   T    |     |   Y    |  U  |  I  |  O  |  P  | WIN  |
-// | CTRL |  A  |  S  |  D  |  F  |   G    |     |   H    |  J  |  K  |  L  |  ;: | CTRL |
-// |  ALT |  Z  |  X  |  C  |  V  |   B    |     |   N    |  M  |  ,' |  ." |  /? | ALT  |
-//                    | BCK | DEL | ESC[1] |     | ENT[2] | SPC | TAB |
+// |  WIN |  Q  |  W  |  E  |  R  |   T   |     |   Y    |  U  |  I  |  O  |  P  | WIN  |
+// | CTRL |  A  |  S  |  D  |  F  |   G   |     |   H    |  J  |  K  |  L  |  ;: | CTRL |
+// |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |  M  |  ,' |  ." |  /? | ALT  |
+//                    | BCK | DEL | ESC[1]|     | ENT[2] | SPC | TAB |
                         bindings = <
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)         AS(P)      &kp RWIN
    &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)         AS(SEMI)   &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT   AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &kp DEL   &mt MO(1) ESC                 &mt MO(1) RET  &kp SPACE   &kp  TAB
+                        &kp BSPC   &kp DEL   &lt 2 ESC                     &lt 1 RET  &kp SPACE       &kp  TAB
                         >;
                 };
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  | \_ | 7& | 8* | 9| | <> |    | PRT | F12 | F7 | F8 | F9 |  |
-// |  | +- | 4$ | 5% | 6^ | [] |    | SLK | F11 | F4 | F5 | F6 |  |
-// |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
-//              | ,. | 0= | () |    | [0] |     |    |
+// |  | \_ | 7& | 8* | 9| | <> |     | PRT | F12 | F7 | F8 | F9 |  |
+// |  | +- | 4$ | 5% | 6^ | [] |     | SLK | F11 | F4 | F5 | F6 |  |
+// |  | `~ | 1! | 2@ | 3# | {} |     | PAU | F10 | F1 | F2 | F3 |  |
+//              | ,. | 0= | () |     |     |     |    |
                         bindings = <
    &trans  &mt UNDER LBKT   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
    &trans  &mt MINUS PLUS   &mt DLLR N4      &mt PRCNT N5          &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
    &trans  &mt TILDE GRAVE  &mt EXCL N1      &mt AT N2             &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
-           &mt DOT COMMA    &mt EQUAL N0     &mt RPAR LPAR                                                       &tog 0   &trans  &trans
+           &mt DOT COMMA    &mt EQUAL N0     &mt RPAR LPAR                                                       &trans   &trans  &trans
                         >;
                 };
 
@@ -66,12 +66,12 @@
 // |  |     |     |     |     |     |    | Redo | Paste | Copy | Cut  | Undo |  |
 // |  |     | ALT |CTRL |SHFT |     |    | Caps |   ←   |  ↑   |  ↓   |  →   |  |
 // |  |     |     |     |     |     |    | Ins  |  HOME | PgUp | PgDn | End  |  |
-//                |     |     | [0] |    | ENT  |  SPC  |  TAB |
+//                |     |     |     |    | ENT  |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
    &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS       &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
    &trans   &trans   &trans    &trans     &trans     &trans   &kp INS        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
-                     &trans    &trans     &tog 0                             &kp ENT       &kp SPACE     &kp TAB
+                     &trans    &trans     &trans                             &kp ENT       &kp SPACE     &kp TAB
                         >;
                 };
         };
