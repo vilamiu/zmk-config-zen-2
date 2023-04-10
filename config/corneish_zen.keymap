@@ -48,12 +48,12 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  | \_ | 7& | 8* | 9| | <> |    | PRT | F12 | F7 | F8 | F9 |  |
+// |  | _\ | 7& | 8* | 9| | <> |    | PRT | F12 | F7 | F8 | F9 |  |
 // |  | +- | 4$ | 5% | 6^ | [] |    | SLK | F11 | F4 | F5 | F6 |  |
 // |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
 //              | ,. | 0= | () |    |     |     |    |
                         bindings = <
-   &trans  &mt UNDER LBKT   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
+   &trans  &mt BSLH UNDER   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
    &trans  &mt MINUS PLUS   &mt DLLR N4      &mt PRCNT N5          &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
    &trans  &mt TILDE GRAVE  &mt EXCL N1      &mt AT N2             &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
            &mt DOT COMMA    &mt EQUAL N0     &mt RPAR LPAR                                                       &trans   &trans  &trans
