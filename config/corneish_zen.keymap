@@ -48,10 +48,10 @@
                 lower_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  | \_ | 7& | 8* | 9| | <> |     | PRT | F12 | F7 | F8 | F9 |  |
-// |  | +- | 4$ | 5% | 6^ | [] |     | SLK | F11 | F4 | F5 | F6 |  |
-// |  | `~ | 1! | 2@ | 3# | {} |     | PAU | F10 | F1 | F2 | F3 |  |
-//              | ,. | 0= | () |     |     |     |    |
+// |  | \_ | 7& | 8* | 9| | <> |    | PRT | F12 | F7 | F8 | F9 |  |
+// |  | +- | 4$ | 5% | 6^ | [] |    | SLK | F11 | F4 | F5 | F6 |  |
+// |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
+//              | ,. | 0= | () |    |     |     |    |
                         bindings = <
    &trans  &mt UNDER LBKT   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
    &trans  &mt MINUS PLUS   &mt DLLR N4      &mt PRCNT N5          &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
@@ -63,15 +63,15 @@
                 raise_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |     |    | Redo | Paste | Copy | Cut  | Undo |  |
-// |  |     | ALT |CTRL |SHFT |     |    | Caps |   ←   |  ↑   |  ↓   |  →   |  |
-// |  |     |     |     |     |     |    | Ins  |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |     |    | ENT  |  SPC  |  TAB |
+// |  |     |     |     |     |     |   | Redo | Paste | Copy | Cut  | Undo |  |
+// |  |     | ALT |CTRL |SHFT |     |   | Caps |   ←   |  ↑   |  ↓   |  →   |  |
+// |  |     |     |     |     |     |   | Ins  |  HOME | PgUp | PgDn | End  |  |
+//                |     |     |     |   | ENT  |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
    &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS       &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
    &trans   &trans   &trans    &trans     &trans     &trans   &kp INS        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
-                     &trans    &trans     &trans                             &kp ENT       &kp SPACE     &kp TAB
+                     &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
         };
