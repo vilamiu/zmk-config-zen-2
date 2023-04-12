@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-//#define AS(keycode) &as LS(keycode) keycode
+#define AS(keycode) &as LS(keycode) keycode
 
 / {
   chosen {
@@ -16,17 +16,17 @@
 };
 
 / {
-        //behaviors {
-        //    as: auto_shift {
-        //        label = "AUTO_SHIFT";
-        //        compatible = "zmk,behavior-hold-tap";
-        //        #binding-cells = <2>;
-        //        tapping_term_ms = <175>;
-        //        quick_tap_ms = <0>;
-        //        flavor = "tap-preferred";
-        //        bindings = <&kp>, <&kp>;
-        //    };
-        //};
+        behaviors {
+            as: auto_shift {
+                label = "AUTO_SHIFT";
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                tapping_term_ms = <175>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
 
         macros {
             RUN: run {
@@ -60,10 +60,10 @@
 // |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |    M   |  ,' |  ." |  /? | ALT  |
 //                    | BCK | DEL | ESC[3]|     | ENT[1] | SPC[2] | TAB |
                         bindings = <
-   &kp LWIN   &kp Q   &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U      &kp I           &kp O          &kp P      &kp RWIN
-   &kp LALT   &kp A   &kp S    &kp D    &kp F    &kp G    &kp H    &kp J      &kp K           &kp L          &kp SEMI   &kp RALT
-   &kp LCTRL  &kp Z   &kp X    &kp C    &kp V    &kp B    &kp N    &kp M      &mt APOS COMMA  &mt DQT DOT    &kp FSLH   &kp RCTRL
-                      &mt LSHIFT BSPC   &kp DEL  &lt 3 ESC         &lt 1 RET  &lt 2 SPACE     &mt RSHIFT TAB
+   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
+   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
+   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
+                        &mt LSHIFT BSPC      &kp DEL    &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &mt RSHIFT TAB
                         >;
                 };
                 number_layer {
