@@ -51,7 +51,7 @@
                 label = "geater_less_than";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp GT &kp LT &kp LEFT>;
+                bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
             };
         };
 
