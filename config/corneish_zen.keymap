@@ -29,8 +29,8 @@
         };
 
         macros {
-            PARS: zed_em_kay {
-                label = "ZM_zed_em_kay";
+            PARS: parenthesis {
+                label = "parenthesis";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
