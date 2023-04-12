@@ -55,7 +55,7 @@
                         bindings = <
    &trans  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &trans
    &trans  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &trans
-   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBCT LBCT  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
          &mt DOT COMMA    &kp N0   &mt RPAR LPAR                    &trans  &trans  &trans
                         >;
                 };
@@ -69,7 +69,7 @@
                         bindings = <
    &trans  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBCT LBCT  &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBRC LBRC  &trans  &trans  &trans  &trans  &trans  &trans
          &kp UNDER         &kp EQUAL    &mt RPAR LPAR                                &trans  &trans  &trans
                         >;
                 };
