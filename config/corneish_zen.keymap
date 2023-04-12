@@ -28,33 +28,6 @@
             };
         };
 
-        macros {
-            PARS: parenthesis {
-                label = "parenthesis";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
-            };
-            BRC: bracket {
-                label = "bracket";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
-            };
-            BKT: square_bracket {
-                label = "square_bracket";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
-            };
-            GTLT: geater_less_than {
-                label = "geater_less_than";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LT &kp GT &kp LEFT>;
-            };
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -66,10 +39,10 @@
 // |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |    M   |  ,' |  ." |  /? | ALT  |
 //                    | BCK | DEL | ESC[3]|     | ENT[1] | SPC[2] | TAB |
                         bindings = <
-   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)         AS(P)      &kp RWIN
-   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)         AS(SEMI)   &kp RALT
-   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT   AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &kp DEL   &lt 3 ESC                     &lt 1 RET  &lt 2 SPACE     &kp  TAB
+   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
+   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
+   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
+                        &mt LSHIFT BSPC      &kp DEL    &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &mt LSHIFT TAB
                         >;
                 };
                 number_layer {
@@ -80,9 +53,9 @@
 // |  | + | 1 | 2  | 3 | {} |    | PAU | F1 | F2 | F3 | F10 |  |
 //            | ,. | 0 | () |    |     |    |    |
                         bindings = <
-   &trans  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &GTLT   &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-   &trans  &kp MINUS        &kp N4   &kp N5   &kp N6   &BKT    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &trans
-   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &BRC    &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+   &trans  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &trans
+   &trans  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &trans
+   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBCT LBCT  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
            &mt DOT COMMA    &kp N0   &PARS                                      &trans  &trans  &trans
                         >;
                 };
@@ -104,14 +77,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |     |   | Redo | Paste | Copy | Cut  | Undo |  |
-// |  |     | ALT |CTRL |SHFT |     |   | Caps |   ←   |  ↑   |  ↓   |  →   |  |
-// |  |     |     |     |     |     |   | Ins  |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |     |   | ENT  |  SPC  |  TAB |
+// |  |     |     |     |     |      |   | Redo | Paste | Copy | Cut  | Undo |  |
+// |  |     | ALT |CTRL |SHFT | Caps |   |      |   ←   |  ↑   |  ↓   |  →   |  |
+// |  |     |     |     |     | Ins  |   |      |  HOME | PgUp | PgDn | End  |  |
+//                |     |     |      |   | ENT  |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp CAPS       &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp INS        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+   &trans   &trans   &trans    &trans     &trans     &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
