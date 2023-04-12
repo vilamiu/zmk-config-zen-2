@@ -33,19 +33,19 @@
                 label = "run-code";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LALT &kp LSHIFT &kp F10>;
+                bindings = <&macro_tap &kp LALT &kp LSHFT &kp F10>;
             };
-            DEB: debug {
+            DEB: deb {
                 label = "debug-code";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LCTRL &kp F2>;
             };
-            STP: stop {
+            STP: stp {
                 label = "stop-code";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LSHIFT &kp F9>;
+                bindings = <&macro_tap &kp LSHFT &kp F9>;
             };
         };
 
@@ -69,10 +69,10 @@
                 number_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// | RUN | * | 7 | 8  | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | RUN |
-// | DEB | - | 4 | 5  | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | DEB |
-// | STP | + | 1 | 2  | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STP |
-//            | ,. | 0 | () |    |     |    |    |
+// | RUN | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | RUN |
+// | DEB | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | DEB |
+// | STP | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STP |
+//               | ,.| 0 | () |    |     |    |    |
                         bindings = <
    &RUN  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &RUN
    &DEB  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &DEB
@@ -83,10 +83,10 @@
                 symbol_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// | RUN | \  | & | * | | | <> |    |     |     |    |    |    | RUN |
-// | DEB | -  | $ | % | ^ | [] |    |     |     |    |    |    | DEB |
-// | STP | ~` | ! | @ | # | {} |    |     |     |    |    |    | STP |
-//             | _ | = | () |    |     |     |    |
+// | RUN | \  | & | * | | | <> |    |     |     |     |    |    | RUN |
+// | DEB | -  | $ | % | ^ | [] |    |     |     |     |    |    | DEB |
+// | STP | ~` | ! | @ | # | {} |    |     |     |     |    |    | STP |
+//            | _ | = | ()|    |    |     |     |     |
                         bindings = <
    &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
    &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
@@ -98,10 +98,10 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |      |   | Redo | Paste | Copy | Cut  | Undo |  |
-// |  |     | ALT |CTRL |SHFT | Caps |   |      |   ←   |  ↑   |  ↓   |  →   |  |
-// |  |     |     |     |     | Ins  |   |      |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |      |   | ENT  |  SPC  |  TAB |
+// |  |     |     |     |     |      |    | Redo | Paste | Copy | Cut  | Undo |  |
+// |  |     | ALT |CTRL |SHFT | Caps |    |      |   ←   |  ↑   |  ↓   |  →   |  |
+// |  |     |     |     |     | Ins  |    |      |  HOME | PgUp | PgDn | End  |  |
+//                |     |     |      |    | ENT  |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
    &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
