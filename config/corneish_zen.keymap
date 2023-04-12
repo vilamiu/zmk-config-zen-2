@@ -35,13 +35,13 @@
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LALT &kp LSHIFT &kp F10>;
             };
-            DEBUG: debug {
+            DEB: debug {
                 label = "debug-code";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LCTRL &kp F2>;
             };
-            STOP: stop {
+            STP: stop {
                 label = "stop-code";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
