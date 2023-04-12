@@ -77,7 +77,7 @@
    &RUN  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &RUN
    &DEB  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &DEB
    &STO  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBCT LBCT  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &STO
-         &mt DOT COMMA    &kp N0   &PARS                            &trans  &trans  &trans
+         &mt DOT COMMA    &kp N0   &mt RPAR LPAR                    &trans  &trans  &trans
                         >;
                 };
                 symbol_layer {
@@ -91,7 +91,7 @@
    &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
    &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
    &STO  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBCT LBCT  &trans  &trans  &trans  &trans  &trans  &STO
-         &kp UNDER         &kp EQUAL    &PARS                                                &trans  &trans  &trans
+         &kp UNDER         &kp EQUAL    &mt RPAR LPAR                                &trans  &trans  &trans
                         >;
                 };
 
