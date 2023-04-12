@@ -35,6 +35,24 @@
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
             };
+            BRC: bracket {
+                label = "bracket";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
+            };
+            BKT: square_bracket {
+                label = "square_bracket";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
+            };
+            GTLT: geater_less_than {
+                label = "geater_less_than";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp GT &kp LT &kp LEFT>;
+            };
         };
 
         keymap {
@@ -62,9 +80,9 @@
 // |  | `~ | 1! | 2@ | 3# | {} |    | PAU | F10 | F1 | F2 | F3 |  |
 //              | ,. | 0= | () |    |     |     |    |
                         bindings = <
-   &trans  &mt BSLH UNDER   &mt AMPS N7      &mt KP_MULTIPLY N8    &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
-   &trans  &mt PLUS MINUS   &mt DLLR N4      &mt PRCNT N5          &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
-   &trans  &mt TILDE GRAVE  &mt EXCL N1      &mt AT N2             &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
+   &trans  &mt BSLH UNDER   &mt AMPS N7      &mt KP_MULTIPLY N8   &mt PIPE N9   &GTLT   &kp PRINTSCREEN  &kp F12  &kp F7  &kp F8  &kp F9  &trans
+   &trans  &mt PLUS MINUS   &mt DLLR N4      &mt PRCNT N5         &mt CARET N6  &BKT    &kp SCROLLLOCK   &kp F11  &kp F4  &kp F5  &kp F6  &trans
+   &trans  &mt TILDE GRAVE  &mt EXCL N1      &mt AT N2            &mt HASH N3   &BRC    &kp PAUSE_BREAK  &kp F10  &kp F1  &kp F2  &kp F3  &trans
            &mt DOT COMMA    &mt EQUAL N0     &PARS                                                               &trans   &trans  &trans
                         >;
                 };
