@@ -91,12 +91,12 @@
 // -----------------------------------------------------------------------------------------
 // |  | \  | & | * | | | <> |    |     |     |    |    |    |  |
 // |  | -  | $ | % | ^ | [] |    |     |     |    |    |    |  |
-// |  | `~ | ! | @ | # | {} |    |     |     |    |    |    |  |
+// |  | ~` | ! | @ | # | {} |    |     |     |    |    |    |  |
 //             | _ | = | () |    |     |     |    |
                         bindings = <
    &trans  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &GTLT   &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &BKT    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &mt TILDE GRAVE   &kp EXCL     &kp AT            &kp HASH    &BRC    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &mt GRAVE TILDE    &kp EXCL     &kp AT            &kp HASH    &BRC    &trans  &trans  &trans  &trans  &trans  &trans
            &kt UNDER         &kp EQUAL    &PARS                                                 &trans  &trans  &trans
                         >;
                 };
