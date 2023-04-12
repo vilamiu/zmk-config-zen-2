@@ -28,6 +28,27 @@
             };
         };
 
+        macros {
+            RUN: run {
+                label = "run-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LALT &kp LSHFT &kp F10>;
+            };
+            DEB: deb {
+                label = "debug-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LCTRL &kp F2>;
+            };
+            STO: sto {
+                label = "stop-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LSHFT &kp F9>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -50,12 +71,12 @@
 // -----------------------------------------------------------------------------------------
 // | RUN | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | RUN |
 // | DEB | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | DEB |
-// | STP | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STP |
+// | STO | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STO |
 //               | ,.| 0 | () |    |     |    |    |
                         bindings = <
-   &trans  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-   &trans  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &trans
-   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+   &RUN  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &RUN
+   &DEB  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &DEB
+   &STO  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &STO
          &mt DOT COMMA    &kp N0   &mt RPAR LPAR                    &trans  &trans  &trans
                         >;
                 };
@@ -64,12 +85,12 @@
 // -----------------------------------------------------------------------------------------
 // | RUN | \  | & | * | | | <> |    |     |     |     |    |    | RUN |
 // | DEB | -  | $ | % | ^ | [] |    |     |     |     |    |    | DEB |
-// | STP | ~` | ! | @ | # | {} |    |     |     |     |    |    | STP |
+// | STO | ~` | ! | @ | # | {} |    |     |     |     |    |    | STO |
 //            | _ | = | ()|    |    |     |     |     |
                         bindings = <
-   &trans  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBRC LBRC  &trans  &trans  &trans  &trans  &trans  &trans
+   &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
+   &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
+   &STO  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBRC LBRC  &trans  &trans  &trans  &trans  &trans  &STO
          &kp UNDER         &kp EQUAL    &mt RPAR LPAR                                &trans  &trans  &trans
                         >;
                 };
