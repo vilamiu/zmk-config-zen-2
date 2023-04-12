@@ -28,6 +28,27 @@
             };
         };
 
+        macros {
+            RUN: run {
+                label = "run-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LALT &kp LSHIFT &kp F10>;
+            };
+            DEBUG: debug {
+                label = "debug-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LCTRL &kp F2>;
+            };
+            STOP: stop {
+                label = "stop-code";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LSHIFT &kp F9>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -42,35 +63,35 @@
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
    &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
-                        &mt LSHIFT BSPC      &kp DEL    &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &mt LSHIFT TAB
+                        &mt LSHIFT BSPC      &kp DEL    &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &mt RSHIFT TAB
                         >;
                 };
                 number_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// |  | * | 7 | 8  | 9 | <> |    | PRT | F7 | F8 | F9 | F12 |  |
-// |  | - | 4 | 5  | 6 | [] |    | SLK | F4 | F5 | F6 | F11 |  |
-// |  | + | 1 | 2  | 3 | {} |    | PAU | F1 | F2 | F3 | F10 |  |
+// | RUN | * | 7 | 8  | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | RUN |
+// | DEB | - | 4 | 5  | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | DEB |
+// | STP | + | 1 | 2  | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STP |
 //            | ,. | 0 | () |    |     |    |    |
                         bindings = <
-   &trans  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &trans
-   &trans  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &trans
-   &trans  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBCT LBCT  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-           &mt DOT COMMA    &kp N0   &PARS                                      &trans  &trans  &trans
+   &RUN  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &RUN
+   &DEB  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &DEB
+   &STP  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBCT LBCT  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &STP
+         &mt DOT COMMA    &kp N0   &PARS                            &trans  &trans  &trans
                         >;
                 };
                 symbol_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  | \  | & | * | | | <> |    |     |     |    |    |    |  |
-// |  | -  | $ | % | ^ | [] |    |     |     |    |    |    |  |
-// |  | ~` | ! | @ | # | {} |    |     |     |    |    |    |  |
+// | RUN | \  | & | * | | | <> |    |     |     |    |    |    | RUN |
+// | DEB | -  | $ | % | ^ | [] |    |     |     |    |    |    | DEB |
+// | STP | ~` | ! | @ | # | {} |    |     |     |    |    |    | STP |
 //             | _ | = | () |    |     |     |    |
                         bindings = <
-   &trans  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &GTLT   &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &BKT    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &BRC    &trans  &trans  &trans  &trans  &trans  &trans
-           &kp UNDER         &kp EQUAL    &PARS                                                 &trans  &trans  &trans
+   &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
+   &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
+   &STP  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBCT LBCT  &trans  &trans  &trans  &trans  &trans  &STP
+         &kp UNDER         &kp EQUAL    &PARS                                                &trans  &trans  &trans
                         >;
                 };
 
