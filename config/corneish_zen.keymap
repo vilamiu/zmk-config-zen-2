@@ -63,7 +63,7 @@
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
    &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
-                        &mt LSHIFT BSPC      &kp DEL    &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &mt RSHIFT TAB
+                        &kp BSPC   &mt LSHIFT DEL       &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &kp TAB
                         >;
                 };
                 number_layer {
@@ -72,7 +72,7 @@
 // | SHFT | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | SHFT |
 // | ALT  | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | ALT  |
 // | CTRL | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
-//               | ,.| 0 | () |    |     |    |    |
+//                | ,.| 0 | () |    |     |    |    |
                         bindings = <
    &kp LSHFT  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
    &kp LALT   &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
