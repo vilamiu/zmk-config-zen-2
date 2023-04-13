@@ -55,9 +55,9 @@
                 default_layer {
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
-// |  WIN |  Q  |  W  |  E  |  R  |   T   |     |   Y    |    U   |  I  |  O  |  P  | WIN  |
-// | CTRL |  A  |  S  |  D  |  F  |   G   |     |   H    |    J   |  K  |  L  |  ;: | CTRL |
-// |  ALT |  Z  |  X  |  C  |  V  |   B   |     |   N    |    M   |  ,' |  ." |  /? | ALT  |
+// | WIN  |  Q  |  W  |  E  |  R  |   T   |     |   Y    |    U   |  I  |  O  |  P  | WIN  |
+// | ALT  |  A  |  S  |  D  |  F  |   G   |     |   H    |    J   |  K  |  L  |  ;: | ALT  |
+// | CTRL |  Z  |  X  |  C  |  V  |   B   |     |   N    |    M   |  ,' |  ." |  /? | CTRL |
 //                    | BCK | DEL | ESC[3]|     | ENT[1] | SPC[2] | TAB |
                         bindings = <
    &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
@@ -69,15 +69,15 @@
                 number_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// | RUN | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | RUN |
-// | DEB | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | DEB |
-// | STO | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | STO |
+// | SHFT | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | SHFT |
+// | ALT  | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | ALT  |
+// | CTRL | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
 //               | ,.| 0 | () |    |     |    |    |
                         bindings = <
-   &RUN  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &RUN
-   &DEB  &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &DEB
-   &STO  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &STO
-         &mt DOT COMMA    &kp N0   &mt RPAR LPAR                    &trans  &trans  &trans
+   &kp LSHFT  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
+   &kp LALT   &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
+   &kp LCTRL  &kp PLUS         &kp N1   &kp N2   &kp N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp RCTRL
+              &mt DOT COMMA    &kp N0   &mt RPAR LPAR                                     &trans  &trans  &trans
                         >;
                 };
                 symbol_layer {
