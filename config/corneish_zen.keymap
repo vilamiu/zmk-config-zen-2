@@ -29,23 +29,23 @@
         };
 
         macros {
-            RUN: run {
-                label = "run-code";
+            CPSHOW: show {
+                label = "copilot-show";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LALT &kp LSHFT &kp F10>;
+                bindings = <&macro_tap &kp RA(BSLH)>;
             };
-            DEB: deb {
-                label = "debug-code";
+            CPNEXT: next {
+                label = "copilot-next";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LCTRL &kp F2>;
+                bindings = <&macro_tap &kp RA(RBKT)>;
             };
-            STO: sto {
-                label = "stop-code";
+            CPPREV: previous {
+                label = "copilot-previous";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = <&macro_tap &kp LSHFT &kp F9>;
+                bindings = <&macro_tap &kp RA(LBKT)>;
             };
         };
 
@@ -83,14 +83,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |      |    | Redo | Paste | Copy | Cut  | Undo |  |
-// |  |     | ALT |CTRL |SHFT | Caps |    |      |   ←   |  ↑   |  ↓   |  →   |  |
-// |  |     |     |     |     | Ins  |    |      |  HOME | PgUp | PgDn | End  |  |
+// |  |     |     |     |     |      |    | Redo | Paste | Copy | Cut  | Undo | CPSHOW |
+// |  |     | ALT |CTRL |SHFT | Caps |    |      |   ←   |  ↑   |  ↓   |  →   | CPNEXT |
+// |  |     |     |     |     | Ins  |    |      |  HOME | PgUp | PgDn | End  | CPPREV |
 //                |     |     |      |    | ENT  |  SPC  |  TAB |
                         bindings = <
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-   &trans   &trans   &trans    &trans     &trans     &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &CPSHOW
+   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &CPNEXT
+   &trans   &trans   &trans    &trans     &trans     &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &CPPREV
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
