@@ -74,9 +74,9 @@
 // | CTRL | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
 //                  | _  | 0= | () |    |     |    |    |
                         bindings = <
-   &kp LSHFT  &mt BSLH KP_MULTIPLY  &mt AMPS N7   &kp KP_MULTIPLY N8   &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
-   &kp LALT   &mt PLUS MINUS        &mt DLLR N4   &kp PRCNT N5         &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
-   &kp LCTRL  &mt GRAVE TILDE       &mt EXCL N1   &kp AT N2            &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp RCTRL
+   &kp LSHFT  &mt BSLH KP_MULTIPLY  &mt AMPS N7   &mt KP_MULTIPLY N8   &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
+   &kp LALT   &mt PLUS MINUS        &mt DLLR N4   &mt PRCNT N5         &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
+   &kp LCTRL  &mt GRAVE TILDE       &mt EXCL N1   &mt AT N2            &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp RCTRL
               &kp UNDER             &mt EQUAL N0  &mt RPAR LPAR                                     &trans  &trans  &trans
                         >;
                 };
