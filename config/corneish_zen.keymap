@@ -55,15 +55,15 @@
                 default_layer {
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
-// | WIN  |  Q  |  W  |  E  |  R     |  T  |     |   Y  |    U   |  I  |  O  |  P  | WIN  |
-// | ALT  |  A  |  S  |  D  |  F     |  G  |     |   H  |    J   |  K  |  L  |  ;: | ALT  |
-// | CTRL |  Z  |  X  |  C  |  V     |  B  |     |   N  |    M   |  ,' |  ." |  /? | CTRL |
+// | WIN  |  Q  |  W  |  E  |    R   |  T  |     |   Y  |    U   |  I  |  O  |  P  | WIN  |
+// | ALT  |  A  |  S  |  D  |    F   |  G  |     |   H  |    J   |  K  |  L  |  ;: | ALT  |
+// | CTRL |  Z  |  X  |  C  |    V   |  B  |     |   N  |    M   |  ,' |  ." |  /? | CTRL |
 //                    | BCK | DEL[3] | ESC |     |  ENT | SPC[2] | TAB |
                         bindings = <
    &kp LWIN    AS(Q)    AS(W)      AS(E)      AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
    &kp LALT    AS(A)    AS(S)      AS(D)      AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
    &kp LCTRL   AS(Z)    AS(X)      AS(C)      AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &lt 3 DEL  &mt LSHIFT ESC                           &mt LSHIFT RET  &lt 1 SPACE    &kp TAB
+                        &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                           &mt LSHIFT RET  &lt 1 SPACE    &kp TAB
                         >;
                 };
                 number_layer {
