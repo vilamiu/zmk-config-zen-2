@@ -55,24 +55,24 @@
                 default_layer {
                         label = "BASE";
 // -----------------------------------------------------------------------------------------
-// | WIN  |  Q  |  W  |  E  |  R  |   T   |     |   Y    |    U   |  I  |  O  |  P  | WIN  |
-// | ALT  |  A  |  S  |  D  |  F  |   G   |     |   H    |    J   |  K  |  L  |  ;: | ALT  |
-// | CTRL |  Z  |  X  |  C  |  V  |   B   |     |   N    |    M   |  ,' |  ." |  /? | CTRL |
-//                    | BCK | DEL | ESC[3]|     | ENT[1] | SPC[2] | TAB |
+// | WIN  |  Q  |  W  |  E  |  R     |  T  |     |   Y  |    U   |  I  |  O  |  P  | WIN  |
+// | ALT  |  A  |  S  |  D  |  F     |  G  |     |   H  |    J   |  K  |  L  |  ;: | ALT  |
+// | CTRL |  Z  |  X  |  C  |  V     |  B  |     |   N  |    M   |  ,' |  ." |  /? | CTRL |
+//                    | BCK | DEL[3] | ESC |     |  ENT | SPC[2] | TAB |
                         bindings = <
-   &kp LWIN    AS(Q)    AS(W)      AS(E)     AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
-   &kp LALT    AS(A)    AS(S)      AS(D)     AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
-   &kp LCTRL   AS(Z)    AS(X)      AS(C)     AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &mt LSHIFT DEL       &lt 3 ESC          &lt 1 RET  &lt 2 SPACE     &kp TAB
+   &kp LWIN    AS(Q)    AS(W)      AS(E)      AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
+   &kp LALT    AS(A)    AS(S)      AS(D)      AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
+   &kp LCTRL   AS(Z)    AS(X)      AS(C)      AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
+                        &kp BSPC   &lt 3 DEL  &mt LSHIFT ESC                           &mt LSHIFT RET  &lt 1 SPACE    &kp TAB
                         >;
                 };
                 number_layer {
                         label = "NUMBER";
 // -----------------------------------------------------------------------------------------
-// | SHFT | * | 7 | 8 | 9 | <> |    | PRT | F7 | F8 | F9 | F12 | SHFT |
-// | ALT  | - | 4 | 5 | 6 | [] |    | SLK | F4 | F5 | F6 | F11 | ALT  |
-// | CTRL | + | 1 | 2 | 3 | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
-//                | ,.| 0 | () |    |     |    |    |
+// | SHFT | *\ | 7& | 8* | 9| | <> |    | PRT | F7 | F8 | F9 | F12 | SHFT |
+// | ALT  | -+ | 4$ | 5% | 6^ | [] |    | SLK | F4 | F5 | F6 | F11 | ALT  |
+// | CTRL | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
+//                  | _  | 0= | () |    |     |    |    |
                         bindings = <
    &kp LSHFT  &kp KP_MULTIPLY  &kp N7   &kp N8   &kp N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
    &kp LALT   &kp MINUS        &kp N4   &kp N5   &kp N6   &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
@@ -80,21 +80,6 @@
               &mt DOT COMMA    &kp N0   &mt RPAR LPAR                                     &trans  &trans  &trans
                         >;
                 };
-                symbol_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// | RUN | \  | & | * | | | <> |    |     |     |     |    |    | RUN |
-// | DEB | -  | $ | % | ^ | [] |    |     |     |     |    |    | DEB |
-// | STO | ~` | ! | @ | # | {} |    |     |     |     |    |    | STO |
-//            | _ | = | ()|    |    |     |     |     |
-                        bindings = <
-   &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
-   &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
-   &STO  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBRC LBRC  &trans  &trans  &trans  &trans  &trans  &STO
-         &kp UNDER         &kp EQUAL    &mt RPAR LPAR                                &trans  &trans  &trans
-                        >;
-                };
-
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
@@ -107,6 +92,20 @@
    &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
    &trans   &trans   &trans    &trans     &trans     &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
+                        >;
+                };
+                symbol_layer {
+                        label = "SYMBOL";
+// -----------------------------------------------------------------------------------------
+// | RUN | \  | & | * | | | <> |    |     |     |     |    |    | RUN |
+// | DEB | -  | $ | % | ^ | [] |    |     |     |     |    |    | DEB |
+// | STO |  | ! | @ | # | {} |    |     |     |     |    |    | STO |
+//            | _ | = | ()|    |    |     |     |     |
+                        bindings = <
+   &RUN  &kp BSLH          &kp AMPS     &kp KP_MULTIPLY   &kp PIPE    &mt GT LT      &trans  &trans  &trans  &trans  &trans  &RUN
+   &DEB  &kp MINUS         &kp DLLR     &kp PRCNT         &kp CARET   &mt RBKT LBKT  &trans  &trans  &trans  &trans  &trans  &DEB
+   &STO  &mt GRAVE TILDE   &kp EXCL     &kp AT            &kp HASH    &mt RBRC LBRC  &trans  &trans  &trans  &trans  &trans  &STO
+         &kp UNDER         &kp EQUAL    &mt RPAR LPAR                                &trans  &trans  &trans
                         >;
                 };
         };
