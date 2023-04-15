@@ -83,14 +83,14 @@
                 nav_layer {
                         label = "NAV";
 // -----------------------------------------------------------------------------------------
-// |  |     |     |     |     |      |    | Redo | Paste | Copy | Cut  | Undo | CPSHOW |
-// |  |     | ALT |CTRL |SHFT | Caps |    |      |   ←   |  ↑   |  ↓   |  →   | CPNEXT |
-// |  |     |     |     |     | Ins  |    |      |  HOME | PgUp | PgDn | End  | CPPREV |
-//                |     |     |      |    | ENT  |  SPC  |  TAB |
+// |  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo |  |
+// |  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   |  |
+// |  |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  |  |
+//                |     |     |      |    | ENT    |  SPC  |  TAB |
                         bindings = <
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &CPSHOW
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &CPNEXT
-   &trans   &trans   &trans    &trans     &trans     &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &CPPREV
+   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
+   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &CPNEXT        &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+   &trans   &trans   &trans    &trans     &trans     &trans   &CPPREV        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
