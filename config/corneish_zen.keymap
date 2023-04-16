@@ -47,42 +47,89 @@
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp RA(LBKT)>;
             };
-        };
+            RUN: run {
+                label = "pycharm-run";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LS(F10)>;
+            };
+            DEBUG: debug {
+                label = "pycharm-debug";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LS(F9)>;
+            };
+            STOP: debug-stop {
+                label = "pycharm-debug-stop";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LC(F2)>;
+            };
+            SOVER: debug-step-over {
+                label = "pycharm-debug-step";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp F8>;
+            };
+            SOUT: debug-step-out {
+                label = "pycharm-debug-step-out";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LS(F8)>;
+            };
+            SINTO: debug-step-into {
+                label = "pycharm-debug-step-into";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LA(LS(F7))>;
+            };
+            RESUME: debug-resume {
+                label = "pycharm-debug-resume";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp F9>;
+            };
+            TOCURSOR: debug-run-to-cursor {
+                label = "pycharm-debug-run-to-cursor";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&macro_tap &kp LA(F9)>;
+            };
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         label = "BASE";
-// -----------------------------------------------------------------------------------------
-// | WIN  |  Q  |  W  |  E  |    R   |    T   |     |   Y    |    U   |   I    |  O  |  P  | WIN  |
-// | ALT  |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | ALT  |
-// | CTRL |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | CTRL |
-//                    | BCK | DEL[3] | ESC[S] |     | ENT[C] | SPC[2] | TAB[A] |
+// ------------------------------------------------------------------------------------------------------------
+// | SOUT  |  Q  |  W  |  E  |    R   |    T   |     |   Y    |    U   |   I    |  O  |  P  | RUN / RESUME     |
+// | SOVER |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | DEBUG / TOCURSOR |
+// | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP             |
+//                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
                         bindings = <
-   &kp LWIN    AS(Q)    AS(W)      AS(E)      AS(R)      AS(T)    AS(Y)     AS(U)      AS(I)           AS(O)          AS(P)      &kp RWIN
-   &kp LALT    AS(A)    AS(S)      AS(D)      AS(F)      AS(G)    AS(H)     AS(J)      AS(K)           AS(L)          AS(SEMI)   &kp RALT
-   &kp LCTRL   AS(Z)    AS(X)      AS(C)      AS(V)      AS(B)    AS(N)     AS(M)      &mt APOS COMMA  &mt DQT DOT    AS(FSLH)   &kp RCTRL
-                        &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                           &mt RCTRL RET   &lt 1 SPACE    &mt RALT TAB
+   &SOUT    AS(Q)    AS(W)      AS(E)      AS(R)     AS(T)    AS(Y)   AS(U)    AS(I)           AS(O)         AS(P)        &RUN
+   &SOVER   AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &DEBUG
+   &SINTO   AS(Z)    AS(X)      AS(C)      AS(V)     AS(B)    AS(N)   AS(M)    &mt APOS COMMA  &mt DQT DOT   AS(FSLH)     &STOP
+                     &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                      &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
                         >;
                 };
                 number_layer {
                         label = "NUMBER";
-// -----------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------
 // | SHFT | *\ | 7& | 8* | 9| | <> |    | PRT | F7 | F8 | F9 | F12 | SHFT |
 // | ALT  | -+ | 4$ | 5% | 6^ | [] |    | SLK | F4 | F5 | F6 | F11 | ALT  |
 // | CTRL | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | CTRL |
-//                  | _  | 0= | () |    |     |    |    |
+//                  | _  | 0= | () |    | WIN |    |    |
                         bindings = <
    &kp LSHFT  &mt BSLH KP_MULTIPLY  &mt AMPS N7   &mt KP_MULTIPLY N8   &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp RSHFT
    &kp LALT   &mt PLUS MINUS        &mt DLLR N4   &mt PRCNT N5         &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp RALT
    &kp LCTRL  &mt GRAVE TILDE       &mt EXCL N1   &mt AT N2            &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp RCTRL
-              &kp UNDER             &mt EQUAL N0  &mt RPAR LPAR                                     &trans    &trans  &trans
+              &kp UNDER             &mt EQUAL N0  &mt RPAR LPAR                                     &kp RWIN         &trans  &trans
                         >;
                 };
                 nav_layer {
                         label = "NAV";
-// -----------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 // |  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo |  |
 // |  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   |  |
 // |  |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  |  |
