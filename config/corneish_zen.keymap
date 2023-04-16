@@ -29,24 +29,6 @@
         };
 
         macros {
-            CPSHOW: show {
-                label = "copilot-show";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp RA(BSLH)>;
-            };
-            CPNEXT: next {
-                label = "copilot-next";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp RA(RBKT)>;
-            };
-            CPPREV: previous {
-                label = "copilot-previous";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp RA(LBKT)>;
-            };
             RUN: run {
                 label = "pycharm-run";
                 compatible = "zmk,behavior-macro";
@@ -155,8 +137,8 @@
 //                |     |     |      |    | ENT    |  SPC  |  TAB |
                         bindings = <
    &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &CPNEXT        &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-   &trans   &trans   &trans    &trans     &trans     &trans   &CPPREV        &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+   &trans   &trans   &trans    &trans     &trans     &trans   &kp RA(LBKT)   &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
