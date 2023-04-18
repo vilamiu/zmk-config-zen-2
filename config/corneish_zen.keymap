@@ -102,14 +102,14 @@
                 nav_layer {
                         label = "NAV";
 //  -------------------------------------------------------------------------------
-// |  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo |  |
-// |  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   |  |
-// |  |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  |  |
-//                |     |     |      |    | ENT    |  SPC  |  TAB |
+// | CONSOLE  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo | RUN   |
+// | COPILOT  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   | DEBUG |
+// | TERMINAL |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  | HIDE  |
+//                        |     |     |      |    | ENT    |  SPC  |  TAB |
                         bindings = <
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-   &trans   &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-   &trans   &trans   &trans    &trans     &trans     &trans   &kp RA(LBKT)   &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+   &kp LA(K)   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &kp LA(4)
+   &kp F10     &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &kp LA(5)
+   &kp LA(F12) &trans   &trans    &trans     &trans     &trans   &kp RA(LBKT)   &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &kp LS(ESC)
                      &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
                         >;
                 };
