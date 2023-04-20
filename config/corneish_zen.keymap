@@ -12,7 +12,7 @@
 };
 
 &mt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <160>;
 };
 
 / {
