@@ -26,7 +26,14 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
-        };
+           tds: tap_dance_step {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_0";
+                #binding-cells = <0>;
+                tapping-term-ms = <160>;
+                bindings = <&kp F8>, <&kp F9>;
+            };
+       };
 
         macros {
             SOVER: debug-step-over {
@@ -80,7 +87,7 @@
 //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
                         bindings = <
    &SOUT    AS(Q)    AS(W)      AS(E)      AS(R)     AS(T)    AS(Y)   AS(U)    AS(I)           AS(O)         AS(P)        &kp LS(F10)
-   &SOVER   AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &kp LS(F9)
+   &tds     AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &kp LS(F9)
    &SINTO   AS(Z)    AS(X)      AS(C)      AS(V)     AS(B)    AS(N)   AS(M)    &mt APOS COMMA  &mt DQT DOT   AS(FSLH)     &kp LC(F2)
                      &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                      &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
                         >;
