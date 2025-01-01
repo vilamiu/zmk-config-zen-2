@@ -48,12 +48,6 @@
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp LS(F8)>;
             };
-            SINTO: debug-step-into {
-                label = "pycharm-debug-step-into";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LA(LS(F7))>;
-            };
             COMMIT: git-commit {
                 label = "git-commit";
                 compatible = "zmk,behavior-macro";
@@ -86,9 +80,9 @@
 // | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP  |
 //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
                         bindings = <
-   &SOUT    AS(Q)    AS(W)      AS(E)      AS(R)     AS(T)    AS(Y)   AS(U)    AS(I)           AS(O)         AS(P)        &kp LS(F10)
-   &tds     AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &kp LS(F9)
-   &SINTO   AS(Z)    AS(X)      AS(C)      AS(V)     AS(B)    AS(N)   AS(M)    &mt APOS COMMA  &mt DQT DOT   AS(FSLH)     &kp LC(F2)
+   &SOUT    AS(Q)    AS(W)      AS(E)      AS(R)     AS(T)    AS(Y)   AS(U)    AS(I)           AS(O)         AS(P)        &kp LS(F9)
+   &tds     AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &kp F5
+   &kp F7   AS(Z)    AS(X)      AS(C)      AS(V)     AS(B)    AS(N)   AS(M)    &mt APOS COMMA  &mt DQT DOT   AS(FSLH)     &kp LC(F2)
                      &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                      &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
                         >;
                 };
