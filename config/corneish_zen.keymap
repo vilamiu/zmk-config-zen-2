@@ -73,12 +73,12 @@
 
                 default_layer {
                         label = "BASE";
-//  -----------------------------------------------------------------------------------------------------------
-// | SOUT  |  Q  |  W  |  E  |    R   |    T   |     |   Y    |    U   |   I    |  O  |  P  | RUN   |
-// | SOVER |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | DEBUG |
-// | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP  |
-//                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
-//
+                        //  -----------------------------------------------------------------------------------------------------------
+                        // | SOUT  |  Q  |  W  |  E  |    R   |    T   |     |   Y    |    U   |   I    |  O  |  P  | RUN   |
+                        // | SOVER |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | DEBUG |
+                        // | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP  |
+                        //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
+                        //
                         bindings = <
                                 &SOUT   AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LS(F9)
                                 &tds    AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
@@ -89,12 +89,12 @@
 
                 number_layer {
                         label = "NUMBER";
-//  -------------------------------------------------------------------------
-// | PUSH   | *\ | 7& | 8* | 9| | <> |    | PRT | F7 | F8 | F9 | F12 | PLAY |
-// | COMMIT | -+ | 4$ | 5% | 6^ | [] |    | SLK | F4 | F5 | F6 | F11 | NEXT |
-// | UPDATE | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | PREV |
-//                    | _  | 0= | () |    | WIN |    |    |
-//
+                        //  -------------------------------------------------------------------------
+                        // | PUSH   | *\ | 7& | 8* | 9| | <> |    | PRT | F7 | F8 | F9 | F12 | PLAY |
+                        // | COMMIT | -+ | 4$ | 5% | 6^ | [] |    | SLK | F4 | F5 | F6 | F11 | NEXT |
+                        // | UPDATE | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | PREV |
+                        //                    | _  | 0= | () |    | WIN |    |    |
+                        //
                         bindings = <
                                 &PUSH    &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp C_PP
                                 &COMMIT  &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp C_NEXT
@@ -105,12 +105,12 @@
 
                 nav_layer {
                         label = "NAV";
-//  -------------------------------------------------------------------------------
-// | CONSOLE  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo | RUN   |
-// | COPILOT  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   | DEBUG |
-// | TERMINAL |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  | HIDE  |
-//                        |     |     |      |    | ENT    |  SPC  |  TAB |
-//
+                        //  -------------------------------------------------------------------------------
+                        // | CONSOLE  |     |     |     |     |      |    | Redo   | Paste | Copy | Cut  | Undo | RUN   |
+                        // | COPILOT  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   | DEBUG |
+                        // | TERMINAL |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  | HIDE  |
+                        //                        |     |     |      |    | ENT    |  SPC  |  TAB |
+                        //
                         bindings = <
                                 &kp LA(K)   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &kp LA(4)
                                 &kp F10     &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &kp LA(5)
