@@ -5,67 +5,67 @@
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform =  &five_column_transform;
-  };
+        chosen {
+                zmk,matrix_transform = &default_transform;
+                //zmk,matrix_transform =  &five_column_transform;
+        };
 };
 
 &mt {
-    tapping-term-ms = <140>;
+        tapping-term-ms = <140>;
 };
 
 / {
         behaviors {
-            as: auto_shift {
-                label = "AUTO_SHIFT";
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                tapping_term_ms = <150>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
-            };
-           tds: tap_dance_step {
-                compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_0";
-                #binding-cells = <0>;
-                tapping-term-ms = <230>;
-                bindings = <&kp F8>, <&kp F9>;
-            };
-       };
+                as: auto_shift {
+                        label = "AUTO_SHIFT";
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <150>;
+                        quick_tap_ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+                tds: tap_dance_step {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAP_DANCE_0";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <230>;
+                        bindings = <&kp F8>, <&kp F9>;
+                };
+        };
 
         macros {
-            SOVER: debug-step-over {
-                label = "pycharm-debug-step";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp F8>;
-            };
-            SOUT: debug-step-out {
-                label = "pycharm-debug-step-out";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LS(F8)>;
-            };
-            COMMIT: git-commit {
-                label = "git-commit";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LC(K)>;
-            };
-            PUSH: git-push {
-                label = "git-push";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LC(LS(K))>;
-            };
-            UPDATE: git-update {
-                label = "git-update";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings = <&macro_tap &kp LC(T)>;
-            };
+                SOVER: debug-step-over {
+                        label = "pycharm-debug-step";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp F8>;
+                };
+                SOUT: debug-step-out {
+                        label = "pycharm-debug-step-out";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LS(F8)>;
+                };
+                COMMIT: git-commit {
+                        label = "git-commit";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LC(K)>;
+                };
+                PUSH: git-push {
+                        label = "git-push";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LC(LS(K))>;
+                };
+                UPDATE: git-update {
+                        label = "git-update";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&macro_tap &kp LC(T)>;
+                };
         };
 
         keymap {
@@ -78,13 +78,15 @@
 // | SOVER |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | DEBUG |
 // | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP  |
 //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
+//
                         bindings = <
-   &SOUT    AS(Q)    AS(W)      AS(E)      AS(R)     AS(T)    AS(Y)   AS(U)    AS(I)           AS(O)         AS(P)        &kp LS(F9)
-   &tds     AS(A)    AS(S)      AS(D)      AS(F)     AS(G)    AS(H)   AS(J)    AS(K)           AS(L)         AS(SEMI)     &kp F5
-   &kp F7   AS(Z)    AS(X)      AS(C)      AS(V)     AS(B)    AS(N)   AS(M)    &mt APOS COMMA  &mt DQT DOT   AS(FSLH)     &kp LC(F2)
-                     &kp BSPC   &lt 2 DEL  &mt LSHIFT ESC                      &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
+                                &SOUT   AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LS(F9)
+                                &tds    AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
+                                &kp F7  AS(Z)  AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  &mt APOS COMMA  &mt DQT DOT  AS(FSLH)  &kp LC(F2)
+                                &kp BSPC   &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
                         >;
                 };
+
                 number_layer {
                         label = "NUMBER";
 //  -------------------------------------------------------------------------
@@ -92,13 +94,15 @@
 // | COMMIT | -+ | 4$ | 5% | 6^ | [] |    | SLK | F4 | F5 | F6 | F11 | NEXT |
 // | UPDATE | ~` | 1! | 2@ | 3# | {} |    | PAU | F1 | F2 | F3 | F10 | PREV |
 //                    | _  | 0= | () |    | WIN |    |    |
+//
                         bindings = <
-   &PUSH    &mt BSLH KP_MULTIPLY  &mt AMPS N7   &mt KP_MULTIPLY N8   &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp C_PP
-   &COMMIT  &mt PLUS MINUS        &mt DLLR N4   &mt PRCNT N5         &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp C_NEXT
-   &UPDATE  &mt GRAVE TILDE       &mt EXCL N1   &mt AT N2            &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp C_PREV
-               &kp UNDER             &mt EQUAL N0  &mt RPAR LPAR                                     &kp RWIN         &trans  &trans
+                                &PUSH    &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp C_PP
+                                &COMMIT  &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp C_NEXT
+                                &UPDATE  &mt GRAVE TILDE       &mt EXCL N1  &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp C_PREV
+                                &kp UNDER   &mt EQUAL N0   &mt RPAR LPAR            &kp RWIN   &trans   &trans
                         >;
                 };
+
                 nav_layer {
                         label = "NAV";
 //  -------------------------------------------------------------------------------
@@ -106,11 +110,12 @@
 // | COPILOT  |     | ALT |CTRL |SHFT | Caps |    | CPNEXT |   ←   |  ↑   |  ↓   |  →   | DEBUG |
 // | TERMINAL |     |     |     |     | Ins  |    | CPPREV |  HOME | PgUp | PgDn | End  | HIDE  |
 //                        |     |     |      |    | ENT    |  SPC  |  TAB |
+//
                         bindings = <
-   &kp LA(K)   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &kp LA(4)
-   &kp F10     &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &kp LA(5)
-   &kp LA(F12) &trans   &trans    &trans     &trans     &trans   &kp RA(LBKT)   &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &kp LS(ESC)
-                     &trans    &trans     &trans                             &kp RET       &kp SPACE     &kp TAB
+                                &kp LA(K)   &trans   &trans    &trans     &trans     &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &kp LA(4)
+                                &kp F10     &trans   &kp LALT  &kp LCTRL  &kp LSHFT  &trans   &kp RA(RBKT)   &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &kp LA(5)
+                                &kp LA(F12) &trans   &trans    &trans     &trans     &trans   &kp RA(LBKT)   &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &kp LS(ESC)
+                                &trans   &trans   &trans             &kp RET   &kp SPACE   &kp TAB
                         >;
                 };
         };
