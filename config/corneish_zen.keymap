@@ -22,8 +22,8 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping_term_ms = <120>;
-                        quick_tap_ms = <0>;
-                        flavor = "tap-preferred";
+                        quick_tap_ms = <150>;
+                        flavor = "hold-preferred";
                         bindings = <&kp>, <&kp>;
                 };
                 tds: tap_dance_step {
