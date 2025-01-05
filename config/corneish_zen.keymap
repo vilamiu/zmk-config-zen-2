@@ -84,10 +84,10 @@
                         //                    | _  | 0= | () |    | WIN  |    |    |
                         //
                         bindings = <
-                                &kp LC(B)     &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp LA(N1)
-                                &kp LC(LA(B)) &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp LA(N3)
-                                &kp LC(J)     &mt GRAVE TILDE       &mt EXCL N1  &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp LA(N9)
-                                              &kp UNDER   &mt EQUAL N0   &mt RPAR LPAR               &kp RWIN   &trans   &trans
+                                &kp RC(B)  &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp LA(N1)
+                                &kp RC(L)  &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp LA(N3)
+                                &kp RC(J)  &mt GRAVE TILDE       &mt EXCL N1  &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp LA(N9)
+                                           &kp UNDER   &mt EQUAL N0   &mt RPAR LPAR               &kp RWIN   &trans   &trans
                         >;
                 };
 
