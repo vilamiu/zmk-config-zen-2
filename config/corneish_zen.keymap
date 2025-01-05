@@ -54,18 +54,6 @@
                         #binding-cells = <0>;
                         bindings = <&macro_tap &kp LC(K)>;
                 };
-                PUSH: git-push {
-                        label = "git-push";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LC(LS(K))>;
-                };
-                UPDATE: git-update {
-                        label = "git-update";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LC(T)>;
-                };
         };
 
         keymap {
