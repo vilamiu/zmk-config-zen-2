@@ -21,7 +21,7 @@
                         label = "AUTO_SHIFT";
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping_term_ms = <130>;
+                        tapping_term_ms = <120>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
@@ -71,39 +71,39 @@
                                 &SOUT   AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LS(F9)
                                 &tds    AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
                                 &kp F7  AS(Z)  AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  &mt APOS COMMA  &mt DQT DOT  AS(FSLH)  &kp LC(F2)
-                                        &kp BSPC   &lt 2 &kp DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
+                                        &kp BSPC   &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
                         >;
                 };
 
                 number_layer {
                         label = "NUMBER";
                         //  -----------------------------------------------------------------------------
-                        // | LPanel | *\ | 7& | 8* | 9| | <> |    | ALT  | F7 | F8 | F9 | F12 | Explorer |
-                        // | RPanel | -+ | 4$ | 5% | 6^ | [] |    | SHFT | F4 | F5 | F6 | F11 | Search   |
+                        // | LPanel | *\ | 7& | 8* | 9| | <> |    | SHFT | F7 | F8 | F9 | F12 | Explorer |
+                        // | RPanel | -+ | 4$ | 5% | 6^ | [] |    | ALT  | F4 | F5 | F6 | F11 | Search   |
                         // | BPanel | ~` | 1! | 2@ | 3# | {} |    | CTRL | F1 | F2 | F3 | F10 | Source   |
                         //                    | _  | 0= | () |    | WIN  |    |    |
                         //
                         bindings = <
-                                &kp RC(B)            &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp ALT   &kp F7  &kp F8  &kp F9  &kp F12  &kp LA(N1)
-                                &kp RC(KP_MULTIPLY)  &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SHFT  &kp F4  &kp F5  &kp F6  &kp F11  &kp LA(N3)
-                                &kp RC(J)            &mt GRAVE TILDE       &mt EXCL N1  &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp CTRL  &kp F1  &kp F2  &kp F3  &kp F10  &kp LA(N9)
-                                                     &kp UNDER   &mt EQUAL N0   &mt RPAR LPAR               &kp RWIN   &trans   &trans
+                                &kp RC(B)  &mt BSLH KP_MULTIPLY  &mt AMPS N7  &mt KP_MULTIPLY N8  &mt PIPE N9   &mt GT LT      &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &kp LA(N1)
+                                &kp RC(L)  &mt PLUS MINUS        &mt DLLR N4  &mt PRCNT N5        &mt CARET N6  &mt RBKT LBKT  &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &kp LA(N3)
+                                &kp RC(J)  &mt GRAVE TILDE       &mt EXCL N1  &mt AT N2           &mt HASH N3   &mt RBRC LBRC  &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &kp LA(N9)
+                                           &kp UNDER   &mt EQUAL N0   &mt RPAR LPAR               &kp RWIN   &trans   &trans
                         >;
                 };
 
                 nav_layer {
                         label = "NAV";
-                        //  -----------------------------------------------------------------------------------
-                        // |    |     |     |      |      |     |     | Redo | Paste | Copy | Cut  | Undo |    |
-                        // |    | WIN | ALT | CTRL | SHFT |     |     |      |   ←   |  ↑   |  ↓   |  →   |    |
-                        // |    |     |     |      |      |     |     |      |  HOME | PgUp | PgDn | End  |    |
-                        //                         |      |     |     |      |       |      |      |
+                        //  -----------------------------------------------------------------------------
+                        // |    |    |    |    |    |    |    | Redo   | Paste | Copy | Cut  | Undo |    |
+                        // |    |    |    |    |    |    |    |        |   ←   |  ↑   |  ↓   |  →   |    |
+                        // |    |    |    |    |    |    |    |        |  HOME | PgUp | PgDn | End  |    |
+                        //                     |    |    |    |        |       |      |      |
                         //
                         bindings = <
-                                &trans   &trans    &trans   &trans    &trans    &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-                                &trans   &kp LWIN  &kp LALT &kp LCTRL &kp LSHFT &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-                                &trans   &trans    &trans   &trans    &trans    &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
-                                         &trans    &trans   &trans              &trans   &trans         &trans
+                                &trans   &trans   &trans   &trans   &trans   &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
+                                &trans   &trans   &trans   &trans   &trans   &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+                                &trans   &trans   &trans   &trans   &trans   &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+                                         &trans   &trans   &trans            &trans   &trans   &trans
                         >;
                 };
         };
