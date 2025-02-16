@@ -100,10 +100,10 @@
                         //                  |      |      |    |    |      |       |      |
                         //
                         bindings = <
-                                &trans   &trans   &trans   &trans   &trans   &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
-                                &trans   &trans   &trans   &trans   &trans   &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
-                                &trans   &trans   &trans   &trans   &trans   &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
-                                         &trans   &trans   &trans            &trans   &trans   &trans
+                                &trans   &trans   &trans    &trans    &trans    &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
+                                &trans   &trans   &kp LALT  &kp LCTRL &kp LSHFT &trans   &trans         &kp LEFT      &kp UP        &kp DOWN     &kp RIGHT    &trans
+                                &trans   &trans   &trans    &trans    &trans    &trans   &trans         &kp HOME      &kp PG_UP     &kp PG_DN    &kp END      &trans
+                                         &trans   &trans    &trans              &trans   &trans   &trans
                         >;
                 };
         };
