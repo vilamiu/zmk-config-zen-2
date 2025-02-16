@@ -94,10 +94,10 @@
                 nav_layer {
                         label = "NAV";
                         //  -----------------------------------------------------------------------------
-                        // |    |    |    |    |    |    |    | Redo   | Paste | Copy | Cut  | Undo |    |
-                        // |    |    |    |    |    |    |    |        |   ←   |  ↑   |  ↓   |  →   |    |
-                        // |    |    |    |    |    |    |    |        |  HOME | PgUp | PgDn | End  |    |
-                        //                     |    |    |    |        |       |      |      |
+                        // |    |     |     |      |      |    |    | Redo | Paste | Copy | Cut  | Undo |    |
+                        // |    | WIN | ALT | CTRL | SHFT |    |    |      |   ←   |  ↑   |  ↓   |  →   |    |
+                        // |    |     |     |      |      |    |    |      |  HOME | PgUp | PgDn | End  |    |
+                        //                  |      |      |    |    |      |       |      |
                         //
                         bindings = <
                                 &trans   &trans   &trans   &trans   &trans   &trans   &kp LS(LC(Z))  &kp LC(V)     &kp LC(C)     &kp LC(X)    &kp LC(Z)    &trans
