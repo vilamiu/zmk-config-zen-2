@@ -65,13 +65,13 @@
                         // | SOUT  |  Q  |  W  |  E  |    R   |    T   |     |   Y    |    U   |   I    |  O  |  P  | RUN   |
                         // | SOVER |  A  |  S  |  D  |    F   |    G   |     |   H    |    J   |   K    |  L  |  ;: | DEBUG |
                         // | SINTO |  Z  |  X  |  C  |    V   |    B   |     |   N    |    M   |   ,'   |  ." |  /? | STOP  |
-                        //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[A] |
+                        //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[G] |
                         //
                         bindings = <
                                 &SOUT   AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LS(F9)
                                 &tds    AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
                                 &kp F7  AS(Z)  AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  &mt APOS COMMA  &mt DQT DOT  AS(FSLH)  &kp LC(F2)
-                                        &kp BSPC   &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt RALT TAB
+                                        &kp BSPC   &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt LGUI TAB
                         >;
                 };
 
