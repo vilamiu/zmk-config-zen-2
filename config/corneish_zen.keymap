@@ -31,23 +31,11 @@
                         label = "TAP_DANCE_0";
                         #binding-cells = <0>;
                         tapping-term-ms = <230>;
-                        bindings = <&kp F8>, <&kp F9>;
+                        bindings = <&kp F10>, <&kp F5>;
                 };
         };
 
         macros {
-                SOVER: debug-step-over {
-                        label = "pycharm-debug-step";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&macro_tap &kp F8>;
-                };
-                SOUT: debug-step-out {
-                        label = "pycharm-debug-step-out";
-                        compatible = "zmk,behavior-macro";
-                        #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LS(F8)>;
-                };
                 COMMIT: git-commit {
                         label = "git-commit";
                         compatible = "zmk,behavior-macro";
@@ -68,10 +56,10 @@
                         //                     | BCK | DEL[2] | ESC[S] |     | ENT[C] | SPC[1] | TAB[G] |
                         //
                         bindings = <
-                                &SOUT   AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LS(F9)
-                                &tds    AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
-                                &kp F7  AS(Z)  AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  &mt APOS COMMA  &mt DQT DOT  AS(FSLH)  &kp LC(F2)
-                                        &kp BSPC   &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt LGUI TAB
+                                &kp LS(F11) AS(Q)  AS(W)  AS(E)  AS(R)  AS(T)  AS(Y)  AS(U)  AS(I)           AS(O)        AS(P)     &kp LC(F5)
+                                &tds        AS(A)  AS(S)  AS(D)  AS(F)  AS(G)  AS(H)  AS(J)  AS(K)           AS(L)        AS(SEMI)  &kp F5
+                                &kp F11     AS(Z)  AS(X)  AS(C)  AS(V)  AS(B)  AS(N)  AS(M)  &mt APOS COMMA  &mt DQT DOT  AS(FSLH)  &kp LS(F5)
+                                &kp BSPC    &lt 2 DEL   &mt LSHIFT ESC            &mt RCTRL RET   &lt 1 SPACE   &mt LGUI TAB
                         >;
                 };
 
